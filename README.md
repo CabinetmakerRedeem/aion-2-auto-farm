@@ -4,6 +4,7 @@
 
 <img width="1280" height="719" alt="image" src="https://github.com/user-attachments/assets/c73e7c0f-d106-442b-a7a2-af5d45ea2cf9" />
 
+---
 # 🌿 AION 2 Auto-Farm 2026
 
 **Automate your daily grind, farm Kina, and level up your character — while you sleep.**
