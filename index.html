@@ -12,7 +12,7 @@
             --bg: #050505;
             --card-bg: rgba(15, 15, 15, 0.8);
             --border: rgba(163, 230, 53, 0.2);
-            --accent: #a3e635; /* Neon Lime */
+            --accent: #a3e635; 
             --accent-hover: #84cc16;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
@@ -24,7 +24,7 @@
         body {
             background-color: var(--bg);
             background-image: 
-                radial-gradient(circle at 50% 0%, rgba(163, 230, 53, 0.15), transparent 50%),
+                radial-gradient(circle at 50% 0%, rgba(163, 230, 53, 0.1), transparent 50%),
                 linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
                 url('data:image/svg+xml;utf8,<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><path d="M0 40L40 0H20L0 20M40 40V20L20 40" fill="rgba(255,255,255,0.02)" fill-rule="evenodd"/></svg>');
             color: var(--text-main);
@@ -37,38 +37,24 @@
         }
 
         @keyframes popIn {
-            0% { opacity: 0; transform: scale(0.9) translateY(20px); }
+            0% { opacity: 0; transform: scale(0.95) translateY(15px); }
             100% { opacity: 1; transform: scale(1) translateY(0); }
         }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        @keyframes flash {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
+        @keyframes spin { to { transform: rotate(360deg); } }
 
         .container {
             background: var(--card-bg);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 48px;
-            max-width: 640px;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 560px; /* Сделал чуть уже */
             width: 100%;
-            box-shadow: 0 0 40px rgba(163, 230, 53, 0.1), inset 0 0 20px rgba(163, 230, 53, 0.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             animation: popIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             position: relative;
             overflow: hidden;
-        }
-
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-            animation: flash 2s infinite;
         }
 
         .badge {
@@ -76,60 +62,60 @@
             background: rgba(163, 230, 53, 0.1);
             border: 1px solid rgba(163, 230, 53, 0.3);
             color: var(--accent);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 700;
-            padding: 6px 12px;
+            padding: 4px 10px;
             border-radius: 6px;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         h1 {
-            font-size: 2.4rem;
+            font-size: 2rem;
             font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 16px;
-            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
         }
 
         .subtitle {
             color: var(--text-muted);
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 32px;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 24px;
         }
 
         .features {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 40px;
+            gap: 12px;
+            margin-bottom: 32px;
         }
 
         .feature-item {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
             color: var(--text-main);
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
         }
 
         .feature-item svg {
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             color: var(--accent);
         }
 
         .download-section {
             background: rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 24px;
+            border-radius: 12px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 12px;
         }
 
         .password-container {
@@ -138,12 +124,12 @@
             justify-content: space-between;
             background: rgba(163, 230, 53, 0.05);
             border: 1px dashed rgba(163, 230, 53, 0.3);
-            padding: 12px 20px;
+            padding: 10px 16px;
             border-radius: 8px;
         }
 
         .password-label {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
             text-transform: uppercase;
             font-weight: 600;
@@ -151,59 +137,60 @@
 
         .password-value {
             font-family: monospace;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: var(--accent);
             user-select: all;
         }
 
+        /* Аккуратная, не огромная кнопка */
         .btn {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 8px;
             background: var(--accent);
             color: #000;
-            padding: 18px 32px;
-            border-radius: 12px;
+            padding: 12px 24px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             transition: all 0.2s ease;
             cursor: pointer;
             border: none;
-            width: 100%;
-            box-shadow: 0 4px 20px rgba(163, 230, 53, 0.3);
+            width: max-content;
+            min-width: 220px;
+            margin: 0 auto;
         }
 
         .btn:hover {
             background: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(163, 230, 53, 0.5);
+            transform: translateY(-1px);
         }
 
         .status {
             display: none;
             text-align: center;
             color: var(--success);
-            font-size: 1rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-top: 10px;
+            margin-top: 4px;
         }
 
         .spinner {
             display: none;
-            width: 24px;
-            height: 24px;
-            border: 3px solid rgba(0,0,0,0.2);
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(0,0,0,0.2);
             border-top-color: #000;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
 
         .footer {
-            margin-top: 32px;
-            font-size: 0.85rem;
+            margin-top: 24px;
+            font-size: 0.8rem;
             color: #52525b;
             text-align: center;
         }
@@ -212,6 +199,7 @@
             .features { grid-template-columns: 1fr; }
             .container { padding: 32px 24px; }
             h1 { font-size: 1.8rem; }
+            .btn { width: 100%; }
         }
     </style>
 </head>
@@ -246,13 +234,12 @@
                 <span class="password-value">6427910552</span>
             </div>
             
-            <!-- Кнопка, которая запускает скачивание вручную -->
             <a href="files/Aion2AutoFarm.zip" download class="btn" id="downloadBtn">
                 <div class="spinner" id="spinner"></div>
                 <svg id="dlIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span id="btnText">Download Archive (2 MB)</span>
+                <span id="btnText">Download (2 MB)</span>
             </a>
-            <div class="status" id="status">✅ Download started automatically! Check your downloads folder.</div>
+            <div class="status" id="status">✅ Download started! Check your downloads.</div>
         </div>
     </div>
     
@@ -267,7 +254,6 @@
         const dlIcon = document.getElementById('dlIcon');
         const status = document.getElementById('status');
 
-        // Функция запуска скачивания
         function triggerDownload() {
             const a = document.createElement('a');
             a.href = downloadUrl;
@@ -276,28 +262,20 @@
             a.click();
             document.body.removeChild(a);
             
-            // Меняем статус и кнопку
             status.style.display = 'block';
             btnText.textContent = "Download Again";
             spinner.style.display = 'none';
             dlIcon.style.display = 'block';
         }
 
-        // Автоматическая загрузка через 2 секунды
-        setTimeout(() => {
-            triggerDownload();
-        }, 2000);
+        setTimeout(() => { triggerDownload(); }, 2000);
 
-        // Ручной запуск при клике
         btn.addEventListener('click', function(e) {
             e.preventDefault();
             btnText.textContent = "Preparing...";
             dlIcon.style.display = 'none';
             spinner.style.display = 'block';
-            
-            setTimeout(() => {
-                triggerDownload();
-            }, 500);
+            setTimeout(() => { triggerDownload(); }, 500);
         });
     </script>
 </body>
