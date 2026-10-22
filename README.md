@@ -61,7 +61,7 @@ AION 2 is a beautiful MMORPG, but let’s be honest: the daily routine is exhaus
 
 | In-Game Overlay |
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/a724ff2b-d818-4a83-ab8c-d383ff9c323c" />
-) |
+
 
 </div>
 
